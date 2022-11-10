@@ -18,7 +18,7 @@ await db.read();
 // If db.json doesn't exist, db.data will be null
 // Use the code below to set default data
 // db.data = db.data || { posts: [] } // For Node < v15.x
-db.data ||= { records: [], users: [] }; // For Node >= 15.x
+db.data = db.data || { records: [], users: [] }; // For Node >= 15.x
 
 // Alternatively, you can also use this syntax if you prefer
 export const { records, users } = db.data;
